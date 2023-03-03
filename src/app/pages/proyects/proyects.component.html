@@ -1,0 +1,48 @@
+<div class="2xl:mx-auto 2xl:container lg:py-16 lg:px-40 xl:px-20 md:py-12 md:px-6 py-9 px-4">
+    <div class="flex flex-col items-center justify-center">
+        <h1 class="text-4xl font-semibold leading-9 text-gray-800">Nuestros Proyectos</h1>
+        <p class="text-base leading-6 text-center text-gray-600 sm:w-96 md:w-9/12 lg:w-5/12 mt-4">En esta sección encotraras todos los proyectos que estamos llevando acabo en el momento</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 lg:gap-x-8 md:gap-6 gap-4 lg:mt-12 md:mt-9 mt-6">
+        <div class=" relative flex items-center justify-center" *ngFor="let item of proyectos">
+            <img class="brightness-50" [src]="item.urlimage" alt="chair" />
+            <div class="absolute top-0 flex flex-col w-80 md:w-80 lg:w-80 xl:w-96 h-full items-center justify-between py-10">
+                <div class="flex items-center justify-center flex-col h-full">
+                    <h2 class="xl:px-10 md:px-2 px-7 text-2xl font-semibold leading-normal text-center text-white">{{item.name}}</h2>
+                    <p class="xl:px-10 md:px-2 px-7 text-base leading-normal text-center text-white mt-4">{{item.desc}}</p>
+                </div>
+                <div class="px-4 md:w-auto w-full">
+                    <button (click)="openModal(item)" class="focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 w-full hover:bg-gray-300 transition duration-150 text-base font-medium leading-none text-center text-gray-800 py-4 px-12 bg-white focus:outline-none">Saber Más</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="2xl:mx-auto 2xl:container lg:py-16 lg:px-40 xl:px-20 md:py-12 md:px-6 py-9 px-4">
+    <div class="flex items-center justify-between md:flex-row flex-col py-12 space-y-6 md:space-y-0 w-full">
+        <div class="hidden md:block w-1/4">
+            <img class="hidden xl:block w-full" [src]="imgDefensaFauna" alt="behzad-ghaffarian-nh-Wg-ZNV85-LQ-unsplash-1-1" />
+            <img class="xl:hidden w-full" [src]="imgDefensaFauna" alt="behzad-ghaffarian-nh-Wg-ZNV85-LQ-unsplash-1-1-1" />
+        </div>
+        <div class="flex justify-center items-center flex-col xl:w-2/5 md:px-6 sm:w-3/4 md:w-2/4">
+            <div class="">
+                <h1 class="xl:text-4xl text-3xl font-semibold leading-9 text-gray-800">RESOLUCIÓN NÚMERO 02370 DEL 03 DE DICIEMBRE DE 2019</h1>
+            </div>
+            <div class="mt-4">
+                <p class="xl:text-xl text-base leading-7 text-center text-gray-600">Proferida por la AUTORIDAD NACIONAL DE LICENCIAS AMBIENTALES- ANLA, por medio de la cual se otorga a favor de la sociedad comercial TESOROS DE COLOMBIA SUSTAINABLE FARM S.A.S</p>
+            </div>
+        </div>
+        <div class="flex  w-1/4 justify-center flex-row space-x-4 md:space-x-0">
+            <div class="w-full">
+                <img class="hidden xl:block w-full" [src]="imgSesiones" alt="behzad-ghaffarian-nh-Wg-ZNV85-LQ-unsplash-1-1" />
+                <img class="xl:hidden w-full" [src]="imgSesiones" alt="sven-brandsma-Qz6-Zx4-Rjd-D8-unsplash-1" />
+            </div>
+            <div class="md:hidden w-full">
+                <img class="hidden xl:block w-full" [src]="imgSesiones" alt="behzad-ghaffarian-nh-Wg-ZNV85-LQ-unsplash-1-1" />
+                <img class="xl:hidden w-full" [src]="imgSesiones" alt="behzad-ghaffarian-nh-Wg-ZNV85-LQ-unsplash-1-1-1" />
+            </div>
+        </div>
+    </div>
+</div>

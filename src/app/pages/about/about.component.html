@@ -1,0 +1,144 @@
+<div class="2xl:container 2xl:mx-auto lg:py-12 lg:px-12 md:py-12 md:px-6 py-9 px-4">
+    <p class="font-normal text-sm leading-3 text-teal-700 dark:text-teal-500 hover:text-teal-800 cursor-pointer pb-2">Nosotros</p>
+    <div class="flex lg:flex-row flex-col lg:gap-8 sm:gap-10 gap-12">
+        <div class="w-full lg:w-6/12">
+            <h2 class="w-full font-bold lg:text-4xl text-3xl lg:leading-10 dark:text-white leading-9">
+                <span class="absolute">FUNDACIÓN </span> <br> A Vuelo de Pájaro
+            </h2>
+            <p class="font-normal text-base leading-6 text-gray-600 dark:text-gray-200 mt-6">
+                A vuelo de pájaro es una organización social nacida en el año 2017 en el municipio de Apía Risaralda, constituida legalmente como entidad sin ánimo de lucro en el año 2020. Promovemos la conservación ambiental y el desarrollo sostenible, involucrando
+                las comunidades con una perspectiva pedagógica. Impartimos educación ambiental a niños, niñas, jóvenes y adultos bajo estrategias que involucran al colectivo, en los procesos de conservación. Desarrollamos proyectos que aportan a la economía
+                circular dentro de las localidades de influencia.
+            </p>
+        </div>
+        <div class="w-full lg:w-6/12">
+            <img class="lg:block hidden w-full h-4/5" [src]="imgAbout" alt="people discussing on board" />
+            <img class="lg:hidden sm:block hidden w-full h-4/5" [src]="imgAbout" alt="people discussing on board" />
+            <img class="sm:hidden block w-full h-4/5" [src]="imgAbout" alt="people discussing on board" />
+        </div>
+    </div>
+
+    <div class="relative mt-6">
+        <div class="grid sm:grid-cols-3 grid-cols-2 sm:gap-8 gap-4">
+            <div class="z-20 w-12 h-12 bg-gray-800 rounded-full flex justify-center items-center">
+                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/about-us-3-svg1.svg" alt="flag" />
+            </div>
+
+            <img class="z-20" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/about-us-3-svg2.svg" alt="note" />
+
+            <img class="z-20 sm:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/about-us-3-svg3.svg" alt="users" />
+        </div>
+        <hr class="z-10 absolute top-2/4 w-full bg-gray-200" />
+    </div>
+    <div class="grid sm:grid-cols-3 grid-cols-2 sm:gap-8 gap-4">
+        <div>
+            <p class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white mt-6">Fundación</p>
+            <p class="font-normal text-base leading-6 text-gray-600 dark:text-gray-200 mt-6">
+                A vuelo de pájaro es una organización social nacida en el año 2017 en la vereda la linea, del municipio de Apía Risaralda, constituida legalmente como entidad sin ánimo de lucro en el año 2020
+            </p>
+        </div>
+        <div>
+            <p class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white mt-6">Metas</p>
+            <p class="font-normal text-base leading-6 text-gray-600 dark:text-gray-200 mt-6">
+                Educar, construir, transformar y apostarle a una sociedad mas sencible con el planeta
+            </p>
+        </div>
+        <div class="sm:block hidden">
+            <p class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white mt-6">Personas</p>
+            <p class="font-normal text-base leading-6 text-gray-600 dark:text-gray-200 mt-6">
+                Somos un equipo de personas entregadas a hacer de este mundo un lugar mejor. Aportamos a procesos sociales y al desarrollo sostenible
+            </p>
+        </div>
+    </div>
+    <div class="sm:hidden block relative mt-8">
+        <div class="grid sm:grid-cols-3 grid-cols-2 sm:gap-8 gap-4">
+            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/about-us-3-svg3.svg" alt="user" />
+        </div>
+        <hr class="z-10 absolute top-2/4 w-full bg-gray-200" />
+    </div>
+    <div class="sm:hidden grid sm:grid-cols-3 grid-cols-2 sm:gap-8 gap-4">
+        <div>
+            <p class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white mt-6">400k User</p>
+            <p class="font-normal text-base leading-6 text-gray-600 dark:text-gray-200 mt-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+        </div>
+    </div>
+
+    <div class="flex lg:flex-row flex-col md:gap-14 gap-16 justify-between lg:mt-20 mt-16">
+        <div class="w-full lg:w-6/12">
+            <h2 class="font-bold lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800 dark:text-white"></h2>
+            <p class="font-normal text-base leading-6 text-gray-600 dark:text-gray-200 mt-6 w-full lg:w-10/12 xl:w-9/12">
+
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<div class="px-4 py-12 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8 lg:py-12" *ngIf="vision">
+    <div class="grid gap-10 mx-auto sm:grid-cols-2 lg:grid-cols-2 lg:max-w-screen-xl">
+        <div class="2xl:mx-auto 2xl:container md:px-20 px-4 md:py-2 py-2">
+            <div class="relative rounded-md">
+                <img [src]="imgAboutVision" class="w-full h-full rounded-md  object-center object-fill absolute sm:block hidden" />
+                <img [src]="imgAboutVision" class="w-full h-full rounded-md absolute object-center object-fill sm:hidden" />
+                <div class="text-xl relative z-20 bg-gradient-to-r from-teal-700 to-transparent w-full h-full z-40 top-0 md:p-16 p-6 flex flex-col justify-between rounded-md ">
+                    <div>
+                        <h1 class="md:text-5xl text-3xl font-bold md:leading-10 leading-9 text-white sm:w-auto w-64">{{vision.title}}</h1>
+                        <p class="text-lg leading-6 text-white xl:w-auto lg:w-auto md:w-auto  2xl:pr-12 mt-4">{{vision.desc}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="2xl:mx-auto 2xl:container md:px-20 px-4 md:py-2 py-2">
+            <div class="relative rounded-md">
+                <img [src]="imgAboutMision" class="w-full h-full rounded-md  object-center object-fill absolute sm:block hidden" />
+                <img [src]="imgAboutMision" class="w-full h-full rounded-md absolute object-center object-fill sm:hidden" />
+                <div class="text-xl relative z-20 bg-gradient-to-r from-transparent to-teal-700 w-full h-full z-40 top-0 md:p-16 p-6 flex flex-col justify-between rounded-md ">
+                    <div class="text-end w-auto">
+                        <h1 class="md:text-5xl text-3xl font-bold md:leading-10 leading-9 text-white sm:w-auto w-auto">{{mision.title}}</h1>
+                        <p class="text-lg leading-6 text-white xl:w-auto lg:w-auto md:w-auto mt-4">{{mision.desc}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-12">
+    <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+        <div>
+            <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+                Nuestro equipo
+            </p>
+        </div>
+        <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+            <span class="relative inline-block">
+                <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+                  <defs>
+                    <pattern id="1d4040f3-9f3e-4ac7-b117-7d4009658ced" x="0" y="0" width=".135" height=".30">
+                      <circle cx="1" cy="1" r=".7"></circle>
+                    </pattern>
+                  </defs>
+                  <rect fill="url(#1d4040f3-9f3e-4ac7-b117-7d4009658ced)" width="52" height="24"></rect>
+                </svg>
+            </span> Nuestro talentoso equipo
+        </h2>
+        <p class="text-base text-gray-700 md:text-lg" *ngIf="teamDesc">
+            {{teamDesc.desc}}
+        </p>
+    </div>
+    <div class="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-8">
+        <div class="grid gap-10 mx-auto sm:grid-cols-2 lg:grid-cols-3 lg:max-w-screen-lg">
+            <div *ngFor="let item of team">
+                <img class="object-cover w-32 h-32 rounded-full shadow" [src]="item.img" />
+                <div class="flex flex-col justify-center mt-2">
+                    <p class="text-lg font-bold uppercase">{{item.nombre}}</p>
+                    <p class="mb-4 text-xs text-gray-800 uppercase">{{item.cargo}}</p>
+                    <p class="text-sm tracking-wide text-gray-800">
+                        {{item.desc}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

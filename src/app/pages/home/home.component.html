@@ -1,0 +1,90 @@
+<div class="py-20 flex flex-col items-center justify-center">
+    <div class="xl:w-1/2 w-11/12">
+        <h1 role="heading" tabindex="0" class="text-6xl font-bold 2xl:leading-10 leading-10 text-center text-gray-800">Generando conciencia ambiental</h1>
+        <h2 role="contentinfo" tabindex="0" class="text-base leading-normal text-center text-gray-600 mt-5">
+        </h2>
+    </div>
+    <div class="px-12 flex flex-wrap items-start mt-4" *ngIf="imgSlider[0]['urlimage']">
+        <div class="mt-24">
+            <div class="flex items-end">
+                <img tabindex="0" [src]="imgSlider[0]['urlimage']" alt="girl with blue background" class="w-20 h-20 object-cover object-fit rounded-lg mr-6" />
+                <img tabindex="0" [src]="imgSlider[1]['urlimage']" alt="guy winking" class="w-48 h-36 rounded-lg" />
+            </div>
+            <div class="flex items-center justify-end my-6">
+                <img tabindex="0" [src]="imgSlider[2]['urlimage']" alt="guy smiling" class="w-96 h-72 rounded-lg object-center object-fit" />
+            </div>
+            <div class="flex items-start">
+                <img tabindex="0" [src]="imgSlider[3]['urlimage']" alt="girl with bluw background" class="w-48 h-48 object-cover object-fit rounded-lg" />
+                <img tabindex="0" [src]="imgSlider[4]['urlimage']" alt="guy with glasses" class="w-20 h-20 rounded-lg ml-6 flex-shrink-0 object-cover object-fit" />
+            </div>
+        </div>
+        <div class="ml-6 mt-32">
+            <img tabindex="0" [src]="imgSlider[5]['urlimage']" class="w-72 h-80 rounded-lg object-cover object-fit" alt="guy with sunglasses" />
+            <div class="flex items-start mt-6">
+                <img tabindex="0" [src]="imgSlider[6]['urlimage'] ? imgSlider[6]['urlimage'] : imgPreguntasFrecuentes" alt="girl  laughing" class="w-48 h-48 rounded-lg object-cover object-fit" />
+                <img tabindex="0" [src]="imgSlider[7]['urlimage']" alt="guy with glasses" class="w-20 h-20 rounded-lg ml-6 object-cover object-fit" />
+            </div>
+        </div>
+        <div class="mt-14 ml-6">
+            <div class="lg:flex">
+                <div>
+                    <img tabindex="0" [src]="imgSlider[8]['urlimage']" alt="group of friends" class="w-96 h-72 rounded-lg object-center object-fit" />
+                </div>
+                <div>
+                    <div class="flex ml-6">
+                        <img tabindex="0" [src]="imgSlider[9]['urlimage']" class="w-20 h-20 object-cover object-fit rounded-lg mt-14" alt="man" />
+                        <img tabindex="0" [src]="imgSlider[10]['urlimage']" class="w-20 h-24 object-cover object-fit rounded-lg ml-6" alt="woman" />
+                    </div>
+                    <img tabindex="0" [src]="imgSlider[11]['urlimage']" alt="boy with blonde hair" class="ml-6 mt-6 w-48 h-32 object-cover object-fit rounded-lg" />
+                </div>
+            </div>
+            <div class="mt-6 flex">
+                <img tabindex="0" class="w-48 h-48 object-cover object-fit rounded-lg" [src]="imgSlider[12]['urlimage']" alt="young girl with red hair" />
+                <img tabindex="0" class="w-72 h-56 object-cover object-fit rounded-lg ml-6" [src]="imgSlider[13]['urlimage']" alt="young girl with red hair" />
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="2xl:container 2xl:mx-auto md:py-12 lg:px-20 md:px-6 py-9 px-4">
+    <h2 class="font-semibold lg:text-4xl text-3xl lg:leading-9 md:leading-7 leading-9 text-gray-800">Preguntas Frecuentes</h2>
+
+    <div class="flex md:flex-row flex-col md:space-x-8 md:mt-16 mt-8">
+        <div class="md:w-5/12 lg:w-4/12 w-full">
+            <img [src]="imgPreguntasFrecuentes" alt="Image of Glass bottle" class="w-full md:block hidden" />
+            <img [src]="imgPreguntasFrecuentes" alt="Image of Glass bottle" class="w-full md:hidden block" />
+        </div>
+        <div class="md:w-7/12 lg:w-8/12 w-full md:my-auto sm:mt-14">
+            <div *ngFor="let item of preguntasFrecuentes; let i=index">
+                <div class="flex justify-between items-center cursor-pointer">
+                    <h3 class="font-semibold text-xl leading-5 text-gray-800">{{item.pregunta}}</h3>
+                    <button aria-label="too" class="cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" (click)="collapse(i)">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path [ngClass]="!isToggle[i] ? ' hidden ' : ' block '" d="M10 4.1665V15.8332" stroke="#1F2937" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M4.16602 10H15.8327" stroke="#1F2937" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                  </button>
+                </div>
+                <p *ngIf="isToggle[i]" class="font-normal text-base leading-6 text-gray-600 mt-4 w-11/12">{{item.respuesta}}</p>
+                <hr class="my-7 bg-gray-200" />
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="2xl:mx-auto 2xl:container py-12 lg:px-20 md:px-6 px-4">
+    <div class="w-full flex flex-col justify-center items-center">
+        <div class="flex flex-col justify-center items-center text-center space-y-4">
+            <h1 class="text-3xl lg:text-4xl dark:text-white font-semibold leading-9 md:leading-7 lg:leading-9 text-gray-800">Nuestros Aliados</h1>
+            <p class="text-base leading-6 dark:text-gray-400 text-center text-gray-600 w-full md:w-10/12">We just got featured in the following magazines and it has been the most incredible journey. We work with the best fashion magazines across the world</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 w-full lg:grid-cols-4 justify-items-around gap-x-6 gap-y-6 xl:gap-x-8 mt-10">
+            <div *ngFor="let item of imgParners" class="w-full focus:outline-none border focus:border-gray-800 border-transparent bg-gray-100 dark:bg-gray-800 flex justify-center items-center flex-col text-center py-14 px-12 space-y-6">
+                <img [src]="item.urlimage" [alt]="item.name" width="75%">
+            </div>
+        </div>
+    </div>
+</div>
